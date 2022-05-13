@@ -65,16 +65,7 @@ export class YForm {
 	}
 
 	isValid() {
-		let valid = true;
-
-		const fields = this.fields.filter(field => field.required);
-
-		for (let field of fields) {
-			if (!field.is_valid) {
-				valid = false;
-				break;
-			}
-		}
+		const valid = !this.fields.filter(field => field.required && !field.is_valid).length;
 
 		return valid;
 	}
