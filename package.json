@@ -2,13 +2,15 @@
 	"name": "yform",
 	"version": "0.0.1",
 	"description": "Form library",
-	"scripts": {
-		"test": "echo 1"
-	},
 	"author": {
 		"name": "Yevhenii Korchak",
 		"email": "yevheni.dev@gmail.com",
 		"url": "https://github.com/yevheni"
+	},
+	"types": "dist/types/form.d.ts",
+	"main": "dist/form.js",
+	"scripts": {
+		"build": "rm -rf dist && tsc"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.17.9"

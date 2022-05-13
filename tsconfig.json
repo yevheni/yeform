@@ -10,6 +10,8 @@
 		"allowJs": true,
 		"removeComments": true,
 		"experimentalDecorators": true,
-		"lib": ["es2019", "dom"]
+		"lib": ["es2019", "dom"],
+		"declaration": true,
+		"declarationDir": "./dist/types"
 	}
 }
