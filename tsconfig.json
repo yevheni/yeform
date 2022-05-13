@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES6",
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"baseUrl": "./",
+		"outDir": "./dist",
+		"allowJs": true,
+		"removeComments": true,
+		"experimentalDecorators": true,
+		"lib": ["es2019", "dom"]
+	}
+}
