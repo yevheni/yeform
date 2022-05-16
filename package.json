@@ -7,6 +7,7 @@
 		"email": "yevhenii.korchak@gmail.com",
 		"url": "https://github.com/yevheni"
 	},
+	"license": "MIT",
 	"types": "dist/types/form.d.ts",
 	"main": "dist/form.js",
 	"scripts": {
