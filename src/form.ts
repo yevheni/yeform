@@ -1,6 +1,6 @@
-interface YFieldOptions {
+export interface YFieldOptions {
 	key: string,
-	value: string | number,
+	value: string,
 	changed: number,
 	required: boolean,
 	isValid(): boolean,
@@ -39,7 +39,7 @@ export class YField {
 	}
 
 	isValid() {
-		return !!`${this.value}`.trim();
+		return !!this.value.trim();
 	}
 }
 

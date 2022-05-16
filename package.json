@@ -1,16 +1,17 @@
 {
 	"name": "yform",
 	"version": "0.0.1",
-	"description": "Form library",
+	"description": "Form validation library",
 	"author": {
 		"name": "Yevhenii Korchak",
-		"email": "yevheni.dev@gmail.com",
+		"email": "yevhenii.korchak@gmail.com",
 		"url": "https://github.com/yevheni"
 	},
 	"types": "dist/types/form.d.ts",
 	"main": "dist/form.js",
 	"scripts": {
-		"build": "rm -rf dist && tsc"
+		"build": "rm -rf dist && tsc",
+		"publish": "npm run build && npm publish"
 	},
 	"dependencies": {},
 	"devDependencies": {
