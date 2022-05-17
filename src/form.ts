@@ -1,4 +1,4 @@
-export interface YFieldOptions {
+export interface YeFieldOptions {
 	key: string,
 	value: string,
 	changed: number,
@@ -6,17 +6,17 @@ export interface YFieldOptions {
 	isValid(): boolean,
 }
 
-export class YField {
-	key: YFieldOptions["key"] = "";
-	value: YFieldOptions["value"] = "";
-	changed: YFieldOptions["changed"] = 0;
-	required: YFieldOptions["required"] = false;
+export class YeField {
+	key: YeFieldOptions["key"] = "";
+	value: YeFieldOptions["value"] = "";
+	changed: YeFieldOptions["changed"] = 0;
+	required: YeFieldOptions["required"] = false;
 
 	get is_valid() {
 		return this.isValid();
 	}
 
-	constructor(field?: Partial<YFieldOptions>) {
+	constructor(field?: Partial<YeFieldOptions>) {
 		if (typeof field?.key !== "undefined") {
 			this.key = field.key;
 		}
@@ -43,9 +43,9 @@ export class YField {
 	}
 }
 
-export class YForm {
-	_fields: Partial<YFieldOptions>[] = [];
-	fields: YField[] = [];
+export class YeForm {
+	_fields: Partial<YeFieldOptions>[] = [];
+	fields: YeField[] = [];
 
 	get result() {
 		return this.getResult();
@@ -59,9 +59,9 @@ export class YForm {
 		return this.isValid();
 	}
 
-	constructor(fields: Partial<YFieldOptions>[] = []) {
+	constructor(fields: Partial<YeFieldOptions>[] = []) {
 		this._fields = fields;
-		this.fields = fields.map(field => new YField(field));
+		this.fields = fields.map(field => new YeField(field));
 	}
 
 	isValid() {
@@ -75,7 +75,7 @@ export class YForm {
 	}
 
 	getObject() {
-		const result: Record<string, YField> = {};
+		const result: Record<string, YeField> = {};
 
 		this.fields.forEach(field => {
 			result[field.key] = field;

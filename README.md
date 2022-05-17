@@ -5,7 +5,7 @@ Form validation library
 ## Typescript
 
 ```ts
-import {YForm} from "yform";
+import {YeForm} from "yform";
 
 const fields = [
     {
@@ -33,7 +33,7 @@ const fields = [
         }
     },
 ];
-const form = new YForm(fields);
+const form = new YeForm(fields);
 
 /** Check if form valid */
 console.log(form.is_valid); // false - "last_name" not valid
