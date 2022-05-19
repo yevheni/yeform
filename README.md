@@ -5,7 +5,7 @@ Form validation library
 ## Typescript
 
 ```ts
-import {YeForm} from "yform";
+import {YeForm} from "yeform";
 
 const fields = [
     {
